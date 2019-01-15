@@ -5,4 +5,4 @@
 
 The aim of the exercice is to:
 
-[] Mastering Node.js
+-[ ] Mastering Node.js
