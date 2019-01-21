@@ -5,6 +5,7 @@ That function must be recursive.
 En mathématiques, la factorielle d'un entier naturel n est le produit des nombres entiers
 strictement positifs inférieurs ou égaux à n: n!
 https://onechapteraday.fr/javascript-recursive-functions/
+https://bytearcher.com/articles/equality-comparison-operator-javascript/
 */
 const readlineSync = require("readline-sync");
 let fact= readlineSync.question("Enter a number:");
