@@ -16,7 +16,7 @@ function factorial(x) {
     result = result * i;
     return result;
 }
-console.log(factorial(fact)); //ex 5 outputs 120
+console.log("Factorial: "+factorial(fact)); //ex 5 outputs 120
 // Ver2: recursive function
 function factorial2(x) {
   // This is the base case.
@@ -25,4 +25,4 @@ function factorial2(x) {
   else return x * factorial2(x - 1);
     //console.log(x);
 }
-console.log(factorial2(fact)); //ex 5 outputs 120
+console.log("Factorial using recursive function: "+factorial2(fact)); //ex 5 outputs 120
