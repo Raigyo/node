@@ -14,14 +14,21 @@ To do so, use the three functions you just created as well as the multiRand(n) f
 in Exercise 3.
 */
 const readlineSync = require("readline-sync");
-//variables
-//let arr1 = [23,54,3,150,12];
-let total1 =0; // used in average()
-let numChoosen = readlineSync.question("Choose a number");//used in count ()
-let i = 1; //used in count ()
-let arrNew = []; //used in count ()
-//let rng=0; //used in randomNumber
 
+//variables
+let numChoosen = readlineSync.question("Choose a number");
+let rng=0;// randomNumber
+let i = 1; //used in random  ()
+let arrNew = [];//used in random  ()
+let total1 =0; // used in average()
+//function random number
+function random (i) {
+  if (i <= numChoosen) {
+    arrNew.push(Math.floor(Math.random()*1000) +1);
+    random (i + 1);
+
+  }
+}
 //calulate average of an array
 function average(argAv){
   for (let elem of argAv) {
@@ -30,36 +37,19 @@ function average(argAv){
   }
   console.log("Average: " + total1/argAv.length)
 }
-
 //calculate the min of an array
 function minCalc(argMin){
   let valueMin = Math.min(...argMin);
   console.log("Min value: " +valueMin);
 }
-
 //calculate the max of an array
 function maxCalc(argMax){
   let valueMax = Math.max(...argMax);
   console.log("Max value: " +valueMax);
 }
+random (i);
+console.log("Tableau avec " +numChoosen+ " nombres:" + arrNew)
 
-//chose random number
-/*function randomNumber () {
-  let number = Math.random();
-  rng = Math.floor(number*10) +1;
-}*/
-//create new array
-function count(i) {
-  if (i <= numChoosen) {
-    randomNumber();
-    arrNew.push(rng);
-    count(i + 1);
-
-  }
-  console.log("Tableau avec " +numChoosen+ " nombres :" + arrNew)
-}
-count(i);
-
-average(arr1)
-minCalc(arr1);
-maxCalc(arr1);
+average(arrNew)
+minCalc(arrNew);
+maxCalc(arrNew);
