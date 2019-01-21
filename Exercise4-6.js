@@ -8,16 +8,15 @@ https://onechapteraday.fr/javascript-recursive-functions/
 */
 const readlineSync = require("readline-sync");
 let fact= readlineSync.question("Enter a number:");
-// function
+// Ver1 : function
 function factorial(x) {
   let result = 1;
   for (var i = 1; i <= x; i++)
     result = result * i;
     return result;
-
 }
 console.log(factorial(fact)); //ex 5 outputs 120
-// recursive function
+// Ver2: recursive function
 function factorial2(x) {
   // This is the base case.
   if (x === 0) return 1;
