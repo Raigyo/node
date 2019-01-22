@@ -10,67 +10,23 @@ Create a program that use that function to generate a TV serie object
 and display it to the user in JSON format.
 */
 const readlineSync = require("readline-sync");
-//var & arrays
-let temp ="";
-let firsTime = true;
-let emptyField=true;
-let myObject = {
-  keySeries: "empty",
-  keyProd: "empty",
-  keyCast: [
-    {
-      actor: "empty"
-    },
-  ]
-}
-//add datas
 function askTvSerie(){
-  serieAdd();
-  yearAdd();
-  castAdd();
-  console.log(myObject);
-}
-askTvSerie();
-//check empty fields
-function checkEmptyField(){
-  if (temp==""){
-    emptyField=true;
-  }
-  else{
-    emptyField=false;
-  }
-}
-//add series
-function serieAdd(){
-  while (emptyField==true){
-  temp = readlineSync.question("What is your favourite series?");
-  checkEmptyField();
-  }
-  myObject.keySeries = temp;
-  emptyField=true;
-  temp="";
-}
-//add production year
-function yearAdd(){
-  while (emptyField==true){
-  temp= readlineSync.question("What is the year of production?");
-  checkEmptyField();
-  }
-  myObject.keyProd = temp;
-  emptyField=true;
-  temp="";
-}
-//add casting
-//several actors can be added+at least one is mandatori
-//+empty field means exit if there is at least a data
-function castAdd() {
+  let n=1;
   let i=0;
-  while (temp!="" || firsTime==true){
-    temp= readlineSync.question("Which actors play in the series? ");
-    if (temp!=""){
-      myObject.keyCast[i] = "{ actor: '"+temp+"' }";
+  let myObject = {
+  series :"",
+  production :"",
+  casting :[]
+  }
+  myObject.series = readlineSync.question("What is your favourite series?");
+  myObject.production = readlineSync.question("What is the year of production?");
+  while(parseInt(n) !==0) {
+    n=readlineSync.question("Which actor plays in the series? (press 0 to exit)");
+    if (parseInt(n) !==0){
+      myObject.casting[i]=n;
       i++;
-      firsTime=false;
     }
   }
+  console.log(myObject)
 }
+askTvSerie();
