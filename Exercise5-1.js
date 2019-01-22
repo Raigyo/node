@@ -11,6 +11,7 @@ and display it to the user in JSON format.
 */
 const readlineSync = require("readline-sync");
 //var & arrays
+let temp;
 let actorName;
 let emptyField=true;
 let myObject = {
@@ -42,21 +43,23 @@ function checkEmptyField(){
 
 function serieAdd(){
   while (emptyField==true){
-  let temp = readlineSync.question("What is your favourite series?")
+  temp = readlineSync.question("What is your favourite series?");
   checkEmptyField();
   }
   myObject.keySeries = temp;
   emptyField=true;
+  temp="";
 }
 
 function yearAdd(){
-  console.log(emptyField);
+//  console.log(emptyField);
   while (emptyField==true){
-  let temp= readlineSync.question("What is the year of production?")
+  temp= readlineSync.question("What is the year of production?");
   checkEmptyField();
   }
   myObject.keyProd = temp;
   emptyField=true;
+  temp="";
 }
 
 function castAdd() {
@@ -66,7 +69,6 @@ function castAdd() {
     if (actorName!=""){
       myObject.keyCast[i] = "{ actor: '"+actorName+"' }";
       i++;
-
     }
   }
 }

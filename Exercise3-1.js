@@ -12,7 +12,9 @@ let total1 =0;
 let total2 =0;
 
 for (let elem of arr1) {
-  total1 = total1+elem;
+  //total1 = total1+elem;
+  total1 += elem;
+  //console.log(total1);
 }
 
 for (let elem of arr2) {
