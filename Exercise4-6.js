@@ -6,23 +6,21 @@ is the product of all positive integers less than or equal to n. For example,
 5! = 5*4*3*2*1 = 120
 https://onechapteraday.fr/javascript-recursive-functions/
 https://bytearcher.com/articles/equality-comparison-operator-javascript/
+https://openclassrooms.com/fr/courses/438849-la-recursivite
 */
 const readlineSync = require("readline-sync");
-let fact= readlineSync.question("Enter a number:");
+let n= readlineSync.question("Enter a number:");
 // Ver1 : function
-function factorial(x) {
+function fact1(n) {
   let result = 1;
-  for (var i = 1; i <= x; i++)
+  for (var i = 1; i <= n; i++)
     result = result * i;
     return result;
 }
-console.log("Factorial: "+factorial(fact)); //ex 5 outputs 120
+console.log("Factorial: "+fact1(n)); //ex 5 outputs 120
 // Ver2: recursive function
-function factorial2(x) {
-  // This is the base case.
-  if (x === 0) return 1;
-  // This is the recursive one.
-  else return x * factorial2(x - 1);
-    //console.log(x);
+function fact2(n) {
+  if (n == 0) return 1;// This is the base case. // return 1 =  true
+  else return n * fact2(n - 1);// This is the recursive one.
 }
-console.log("Factorial using recursive function: "+factorial2(fact)); //ex 5 outputs 120
+console.log("Factorial using recursive function: "+fact2(n)); //ex 5 outputs 120
