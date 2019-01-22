@@ -1,9 +1,9 @@
 /*
 Create a function factorial(a) that returns the factorial of a number.
 That function must be recursive.
-
-En mathématiques, la factorielle d'un entier naturel n est le produit des nombres entiers
-strictement positifs inférieurs ou égaux à n: n!
+In mathematics, the factorial of a positive integer n, denoted by n!,
+is the product of all positive integers less than or equal to n. For example,
+5! = 5*4*3*2*1 = 120
 https://onechapteraday.fr/javascript-recursive-functions/
 https://bytearcher.com/articles/equality-comparison-operator-javascript/
 */
