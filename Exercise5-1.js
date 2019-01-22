@@ -11,8 +11,8 @@ and display it to the user in JSON format.
 */
 const readlineSync = require("readline-sync");
 //var & arrays
-let temp;
-let actorName;
+let temp ="";
+let firsTime = true;
 let emptyField=true;
 let myObject = {
   keySeries: "empty",
@@ -23,7 +23,7 @@ let myObject = {
     },
   ]
 }
-//console.log(myObject.keyCast[0]);
+//add datas
 function askTvSerie(){
   serieAdd();
   yearAdd();
@@ -31,7 +31,7 @@ function askTvSerie(){
   console.log(myObject);
 }
 askTvSerie();
-
+//check empty fields
 function checkEmptyField(){
   if (temp==""){
     emptyField=true;
@@ -40,7 +40,7 @@ function checkEmptyField(){
     emptyField=false;
   }
 }
-
+//add series
 function serieAdd(){
   while (emptyField==true){
   temp = readlineSync.question("What is your favourite series?");
@@ -50,9 +50,8 @@ function serieAdd(){
   emptyField=true;
   temp="";
 }
-
+//add production year
 function yearAdd(){
-//  console.log(emptyField);
   while (emptyField==true){
   temp= readlineSync.question("What is the year of production?");
   checkEmptyField();
@@ -61,14 +60,17 @@ function yearAdd(){
   emptyField=true;
   temp="";
 }
-
+//add casting
+//several actors can be added+at least one is mandatori
+//+empty field means exit if there is at least a data
 function castAdd() {
   let i=0;
-  while (actorName!=""){
-    actorName = readlineSync.question("Which actors play in the series? ");
-    if (actorName!=""){
-      myObject.keyCast[i] = "{ actor: '"+actorName+"' }";
+  while (temp!="" || firsTime==true){
+    temp= readlineSync.question("Which actors play in the series? ");
+    if (temp!=""){
+      myObject.keyCast[i] = "{ actor: '"+temp+"' }";
       i++;
+      firsTime=false;
     }
   }
 }
