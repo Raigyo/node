@@ -42,8 +42,10 @@ function thousandRect()  {
   //collapse test
   for (i=0; i<=999; i++){
     for (j=0; j<=999; j++){
-      console.log("rect: " + i + " vs: " + j);
-      myObject.rect[i].collides(myObject.rect[j]);
+      if(i != j){
+        console.log("rect: " + i + " vs: " + j);
+        myObject.rect[i].collides(myObject.rect[j]);
+      }
     }
   }
 }
