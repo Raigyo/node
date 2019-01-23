@@ -21,11 +21,11 @@ class Rectangle {
     this.topLeftYPos < otherRectangle.topLeftYPos + otherRectangle.lenght &&
     this.lenght + this.topLeftYPos > otherRectangle.topLeftYPos) {
     //return true;
-    console.log(this+"true");
+    console.log("true");
     }
     else {
     //return false;
-      console.log(this.+"false");
+      console.log("false");
     }
   }//method
 }//class
@@ -42,7 +42,7 @@ function thousandRect()  {
   //collapse test
   for (i=0; i<=999; i++){
     for (j=0; j<=999; j++){
-      console.log("tab: " + i + " vs: " + j);
+      console.log("rect: " + i + " vs: " + j);
       myObject.rect[i].collides(myObject.rect[j]);
     }
   }
