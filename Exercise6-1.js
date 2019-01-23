@@ -22,6 +22,6 @@ class Circle {
   console.log("y: " + this.yPos + " move to " + yOffset); // y: 12 move to 60
   }//method
 }//class
-let circle1 = new Circle (10,12,20);
+let circle1 = new Circle (10,12,20); // instanciation
 console.log("Surface: " + circle1.surface); // output Surface: 1256.6370614359173
 circle1.move(50,60);
