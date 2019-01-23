@@ -16,6 +16,7 @@ https://www.w3resource.com/javascript-exercises/javascript-array-exercise-17.php
 https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm
 */
 const readlineSync = require("readline-sync");
+//create an object with series data
 function askTvSerie(){
   let dataActor=1;
   let i=0;
@@ -33,12 +34,10 @@ function askTvSerie(){
       i++;
     }
   }
-  //console.log(myObject)
   console.log("Old object: " + JSON.stringify(myObject));
   randomizeCast(myObject);
 }
-askTvSerie();
-
+//randomize the casting part
 function randomizeCast(dataSeries){
   let ctr = dataSeries.casting.length, temp, index;
   // While there are elements in the array
@@ -55,3 +54,5 @@ function randomizeCast(dataSeries){
   //return dataSeries.casting;
   console.log("Mixed object: " + JSON.stringify(dataSeries));
 }
+
+askTvSerie();
