@@ -11,7 +11,7 @@ and display it to the user in JSON format.
 */
 const readlineSync = require("readline-sync");
 function askTvSerie(){
-  let n=1;
+  let dataActor=1;
   let i=0;
   let myObject = {
   series :"",
@@ -20,10 +20,10 @@ function askTvSerie(){
   }
   myObject.series = readlineSync.question("What is your favourite series?");
   myObject.production = readlineSync.question("What is the year of production?");
-  while(parseInt(n) !==0) {
-    n=readlineSync.question("Which actor plays in the series? (press 0 to exit)");
-    if (parseInt(n) !==0){
-      myObject.casting[i]=n;
+  while(parseInt(dataActor) !==0) {
+    dataActor=readlineSync.question("Which actor plays in the series? (0 = exit)");
+    if (parseInt(dataActor) !==0){
+      myObject.casting[i]=dataActor;
       i++;
     }
   }
