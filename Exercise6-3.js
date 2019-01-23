@@ -21,11 +21,11 @@ class Rectangle {
     this.topLeftYPos < otherRectangle.topLeftYPos + otherRectangle.lenght &&
     this.lenght + this.topLeftYPos > otherRectangle.topLeftYPos) {
     //return true;
-    console.log(this.topLeftXPos+"true");
+    console.log(this+"true");
     }
     else {
     //return false;
-      console.log(this.topLeftXPos+"false");
+      console.log(this.+"false");
     }
   }//method
 }//class
