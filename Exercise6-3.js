@@ -1,8 +1,7 @@
 /*
-Create a class name Rectangle with attributes topLeftXPos, topLeftYPos, width and lenght.
-Add a method named collides(otherRectangle) that returns true only if the current
-rectangle collides with otherRectangle.
-Test the collides(otherRectangle) method by using multiple test cases.
+Create a program that will re-use the Rectangle class you created previously.
+It should generate 1000 random instances of Rectangle with random positions and sizes.
+Then it will display all colliding rectangles amongst those that were generated that way.
 */
 class Rectangle {
   constructor(topLeftXPos, topLeftYPos, width, lenght) {
@@ -36,5 +35,3 @@ let rect2 = new Rectangle (0,20,80,85);
 let rect3 = new Rectangle (500,400,5,3);
 rect1.collides(rect2); // output true
 rect2.collides(rect1); // output true
-rect1.collides(rect3); // output false
-rect2.collides(rect3); // output false
