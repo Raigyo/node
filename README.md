@@ -10,5 +10,5 @@ Exercices:
 - [x] Algorithmics with JavaScript 02 - Control structures
 - [x] Algorithmics with JavaScript 03 - Arrays
 - [x] Algorithmics with JavaScript 04 - Functions
-- [ ] Algorithmics with JavaScript 05 - Objects
+- [x] Algorithmics with JavaScript 05 - Objects
 - [ ] Algorithmics with JavaScript 06 - Classes
