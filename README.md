@@ -1,7 +1,7 @@
 # Becode
-## JavaScript Basics and Algorithmics 01
+## Node.js / JavaScript Basics and Algorithmics
 
-20190115
+20190115 - 20190123
 
 Exercices:
 
