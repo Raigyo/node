@@ -20,12 +20,10 @@ class Rectangle {
     this.topLeftXPos + this.width > otherRectangle.topLeftXPos &&
     this.topLeftYPos < otherRectangle.topLeftYPos + otherRectangle.lenght &&
     this.lenght + this.topLeftYPos > otherRectangle.topLeftYPos) {
-    //return true;
-    console.log("true");
+    return true;
     }
     else {
-    //return false;
-      console.log("false");
+    return false;
     }
   }//method
 }//class
@@ -43,7 +41,6 @@ function thousandRect()  {
   for (i=0; i<=999; i++){
     for (j=0; j<=999; j++){
       if(i != j){
-        console.log("rect: " + i + " vs: " + j);
         myObject.rect[i].collides(myObject.rect[j]);
       }
     }
