@@ -39,6 +39,8 @@ function sort(values) {
   while(swapped === true);
   console.log(origValues);
 }
+
+//results
 console.log("Original:");
 console.log(fruitsList);
 console.log("Sorted:");
