@@ -7,3 +7,9 @@ Examples:
 9187 => nothing (it's a prime number too)
 134234 => 2 41 82 1637 3274 67117
 */
+const readlineSync = require("readline-sync");
+//ask number
+let number = readlineSync.question("Enter an integer number: ");
+while (number % 1 !== 0) {
+  number = readlineSync.question("Enter an integer number: ");
+};
