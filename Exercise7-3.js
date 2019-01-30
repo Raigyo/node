@@ -13,3 +13,10 @@ let number = readlineSync.question("Enter an integer number: ");
 while (number % 1 !== 0) {
   number = readlineSync.question("Enter an integer number: ");
 };
+// calculate the modulo
+for (let i = 0; i < number; i++) {
+  let divisor = number % i;
+  if (divisor == 0 && i!= number && i != 1){
+    console.log(i);
+  }
+}
