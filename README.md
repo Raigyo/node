@@ -12,3 +12,4 @@ Exercices:
 - [x] Algorithmics with JavaScript 04 - Functions
 - [x] Algorithmics with JavaScript 05 - Objects
 - [x] Algorithmics with JavaScript 06 - Classes
+- [ ] Algorithmics with JavaScript 07 - Extra Exercises
