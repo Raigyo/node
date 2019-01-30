@@ -19,8 +19,8 @@ var fibonacci_series = function (n) {
   };
 };
 //ask number
-let number = readlineSync.question("Enter a number: ");
+let number = readlineSync.question("Enter an integer number: ");
 while (number % 1 !== 0) {
-  number = readlineSync.question("Enter a number: ");
+  number = readlineSync.question("Enter an integer number: ");
 };
 console.log(fibonacci_series(number-1));
