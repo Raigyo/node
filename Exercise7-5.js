@@ -21,7 +21,7 @@ arrayNumbers.sort();
 console.log(arrayNumbers);
 */
 
-//BOBBLE sort: https://initjs.org/bubble-sort-in-javascript-19fa6fdfbb46
+//BUBBLE sort: https://initjs.org/bubble-sort-in-javascript-19fa6fdfbb46
 function sort(values) {
   var origValues = values.slice();
   var length = origValues.length - 1;
@@ -33,11 +33,17 @@ function sort(values) {
         origValues[i] = origValues[i+1];
         origValues[i+1] = temp;
         swapped = true;
-      }
-    }
+      };
+    };
   }
   while(swapped === true);
   console.log(origValues);
 }
+console.log("Original:");
+console.log(fruitsList);
+console.log("Sorted:");
 sort(fruitsList);
+console.log("Original:");
+console.log(arrayNumbers);
+console.log("Sorted:");
 sort(arrayNumbers);
