@@ -32,6 +32,7 @@ let myMenu = [];
 
 //ask a choice in the menu
 function progrMenu () {
+  console.log("----------------");
   console.log("Hello! Welcome to the Pizza Flavors Manager. \n Please choose your actions: \n 1 - List all the pizza flavors \n 2 - Add a new pizza flavor \n 3 - Remove a pizza flavor \n 4 - Exit this program");
   choice = readlineSync.question("Enter your choice [1 - 4]: ");
   while (choice < 0 || choice > 4 || choice  % 1 !== 0) {
@@ -45,6 +46,7 @@ progrMenu();
 function switchCase (choice) {
   switch(parseInt(choice)) {
     case 1:
+      console.log("---");
       console.log("List all the pizza flavors:");
       for (let i = 0; i < myMenu.length; i++) {
         console.log(i+1 + ":" + myMenu[i]);
@@ -52,6 +54,7 @@ function switchCase (choice) {
       choice = 0;
       progrMenu();
     case 2:
+      console.log("---");
       newFlavor = readlineSync.question("Add a new pizza flavor: ");
       myMenu.push(newFlavor);
       choice = 0;
@@ -60,6 +63,7 @@ function switchCase (choice) {
       for (let i = 0; i < myMenu.length; i++) {
         console.log(i+1 + ":" + myMenu[i]);
       };
+      console.log("---");
       newFlavor = readlineSync.question("Delete a pizza flavor: ");
       console.log(newFlavor);
       if (newFlavor <= myMenu.length || newFlavor > 1 || newFlavor  % 1 !== 0){
@@ -71,7 +75,7 @@ function switchCase (choice) {
       choice = 0;
       progrMenu();
     case 4:
-      break;
+      console.log("Goodbye!");
       //localStorage["myMenu"] = JSON.stringify(myMenu);
   }
 }
