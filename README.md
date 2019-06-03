@@ -2,7 +2,7 @@
 
 ![Becode logo](https://raw.githubusercontent.com/Raigyo/react-character-manager/master/img/becode-logo.png)
 
-* January - February 2019*
+*January - February 2019*
 
 > 🔨  Learning the bases of Javascript using Node.JS
 
