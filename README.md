@@ -1,4 +1,4 @@
-# Algorithmics with JavaScript
+# Algorithmics with JavaScript & Node JS
 
 ![Becode logo](https://raw.githubusercontent.com/Raigyo/react-character-manager/master/img/becode-logo.png)
 
